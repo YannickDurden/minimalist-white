@@ -2,12 +2,12 @@
 title: Blog
 layout: default
 ---
-<section class="mw7 center chivo">
-  <h2 class="fw1 ph3 ph0-l">Nouvelles</h2>
+<section class="mw7 center">
+  <h2 class="fw1 ph3 ph0-l playfair">Nouvelles</h2>
   {% for post in site.posts %}
   <article class="bt bb b--black-10">
     <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ post.url }}">
-      <div class="flex flex-column flex-row-ns">
+      <div class="flex flex-column flex-row-ns chivo">
         <div class="w-100 pl3-ns">
           <h1 class="f3 fw1 mt0 lh-title">{{ post.title }}</h1>
           <p class="f6 f5-l lh-copy">
