@@ -51,6 +51,10 @@ defaults:
     values:
       layout: "default"
 
+title:
+description:
+url:
+
 social:
   linkedin:
   github:
@@ -65,6 +69,11 @@ about:
   subtitle:
 
 permalink: /:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 ```
 
 ## Contributing

@@ -12,6 +12,10 @@ defaults:
     values:
       layout: "default"
 
+title: surlescocottes
+description: ride, dev and other stories
+url: https://surlescocottes.xyz
+
 social:
   linkedin: yannickfrancois
   github: YannickDurden
@@ -25,5 +29,10 @@ header:
 about:
   username: Yannick
   subtitle: curieux
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 permalink: /:title/
