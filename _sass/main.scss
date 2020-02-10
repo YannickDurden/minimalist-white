@@ -37,12 +37,13 @@ table {
   border-width: 1px;
   border-color: rgba(0,0,0,.1);
   border-radius: .25rem;
+  font-family: 'Baskerville', sans-serif;
 }
 
 thead tr {
   background-color: #eee;
 }
 
-tbody tr:nth-child(odd) {
-  background-color: var(--moon-gray);
+tbody tr{
+  text-align: center;
 }
