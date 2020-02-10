@@ -1,0 +1,25 @@
+collections:
+    authors:
+        output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+social:
+  linkedin: yannickfrancois
+  github: YannickDurden
+  instagram: YannickDurden
+  strava: /16018371
+
+header:
+  title: surlescocottes
+  subtitle: ride, dev & other stories
+
+permalink: /:title/

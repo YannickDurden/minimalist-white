@@ -1,0 +1,21 @@
+---
+title: Blog
+---
+<section class="mw7 center chivo">
+  <h2 class="fw1 ph3 ph0-l">Nouvelles</h2>
+  {% for post in site.posts %}
+  <article class="bt bb b--black-10">
+    <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ post.url }}">
+      <div class="flex flex-column flex-row-ns">
+        <div class="w-100 pl3-ns">
+          <h1 class="f3 fw1 mt0 lh-title">{{ post.title }}</h1>
+          <p class="f6 f5-l lh-copy">
+            {{ post.excerpt }}
+          </p>
+          <p class="f6 lh-copy mv0">{{ post.author }}</p>
+        </div>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</section>

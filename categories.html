@@ -1,0 +1,18 @@
+---
+title: categories
+---
+
+<div class="wrap-about mw7 center chivo">
+  <div class="pt0 categories">
+    {% for category in site.categories %}
+    <h2 class="fw1 ph3 ph0-l">{{ category[0]| capitalize }}</h2>
+    <ul class="list pl0 measure center">
+      {% for post in category[1] %}
+      <li class="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+        <a class="f4 db black link hover-blue" href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
