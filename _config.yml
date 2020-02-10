@@ -22,4 +22,8 @@ header:
   title: surlescocottes
   subtitle: ride, dev & other stories
 
+about:
+  username: Yannick
+  subtitle: curieux
+
 permalink: /:title/
