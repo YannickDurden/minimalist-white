@@ -15,3 +15,11 @@ layout: default
     </div>
   </div>
 </article>
+
+{% if page.comments and jekyll.environment == "production" %}
+  <div class="measure db center f5 f4-ns lh-copy">
+    {% include disqus.html %}
+  </div>
+{% endif %}
+
+

@@ -1,5 +1,23 @@
 <nav class="bt bb tc mw7 center mt4">
-    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/">Accueil</a>
-    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/categories">Categories</a>
-    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/about">A propos</a>
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/">
+        {% if site.nav.home %}
+            {{ site.nav.home }}
+        {% else %}
+            Accueil
+        {% endif %}
+    </a>
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/categories">
+        {% if site.nav.categories %}
+            {{ site.nav.categories }}
+        {% else %}
+            Categories
+        {% endif %}
+    </a>
+    <a class="f6 f5-l link bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="{{ site.baseurl }}/about">
+        {% if site.nav.about %}
+            {{ site.nav.about }}
+        {% else %}
+            A propos
+        {% endif %}
+    </a>
 </nav>

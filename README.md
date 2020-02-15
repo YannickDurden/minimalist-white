@@ -32,7 +32,23 @@ Three files are mandatories:
 - about.md
 - categories.md
 
-for each files, the layout name will be the same as the file name.
+### Google Analytics
+
+Google Analytics is enabled in production mode, see _config.yml below to see configuration
+
+### Disqus
+
+Disqus is enabled in production mode, see _config.yml below to see configuration.
+
+Also, add this part in your front matter:
+
+````
+comments: true
+````
+
+---
+
+For each files, the layout name will be the same as the file name.
 
 Now you may edit _config.yml with theses variables:
 
@@ -51,29 +67,44 @@ defaults:
     values:
       layout: "default"
 
+id_google_analytics:
+disqus_url:
 title:
 description:
 url:
+locale: fr
 
 social:
   linkedin:
   github:
   instagram:
+  strava:
 
 header:
   title:
   subtitle:
 
+footer:
+  text:
+
 about:
   username:
   subtitle:
 
-permalink: /:title/
+nav:
+  home:
+  categories:
+  about:
+
+index:
+    title:
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+permalink: /:title/
 ```
 
 ## Contributing

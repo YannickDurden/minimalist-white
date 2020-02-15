@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "minimalist-theme"
-  spec.version       = "0.1.7"
+  spec.version       = "0.1.8"
   spec.authors       = ["YannickDurden"]
   spec.email         = ["y.francois54@gmail.com"]
 
-  spec.summary       = "minimalistic theme based on Tachyon framework. See GitHub Page."
+  spec.summary       = "minimalistic theme based on Tachyon framework. See GitHub Page for more informations."
   spec.homepage      = "https://github.com/YannickDurden/minimalist-white"
   spec.license       = "MIT"
 

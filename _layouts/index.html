@@ -3,7 +3,7 @@ title: Blog
 layout: default
 ---
 <section class="mw7 center">
-  <h2 class="fw1 ph3 ph0-l playfair">Nouvelles</h2>
+  <h2 class="fw1 ph3 ph0-l playfair">{{ site.index.title }}</h2>
   {% for post in site.posts %}
   <article class="bt bb b--black-10">
     <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ post.url }}">
@@ -13,10 +13,11 @@ layout: default
           <p class="f6 f5-l lh-copy">
             {{ post.excerpt }}
           </p>
+          {% assign num_words = post.content | strip_html | number_of_words | append: " words"%}
           <p class="f6 lh-copy mv0 gray">{{ post.author }}</p>
-          <time class="f6 db gray">{{ post.date | date: "%b %d, %y" }}</time>
-        </div>
+          <time class="f6 db gray">{{ post.date | date: "%b %d, %y" }} - {{ num_words }}</time>
       </div>
+    </div>
     </a>
   </article>
   {% endfor %}

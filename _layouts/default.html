@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="{{ site.locale }}">
 
 <head>
   <meta charset="utf-8">
@@ -9,12 +9,15 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
   {% feed_meta %}
   {% seo %}
+  {% if jekyll.environment == "production" %}
+    {% include google-analytics.html %}
+  {% endif %}
 </head>
 
 <body>
   <div class="wrap-content fl w-100 pa2">
     {% include header.html %}
-    {{ content }}
+      {{ content }}
     {% include footer.html %}
   </div>
 </body>
