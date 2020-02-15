@@ -12,8 +12,8 @@ defaults:
     values:
       layout: "default"
 
-id_google_analytics: UA-158530510-1
-disqus_url: https://surlescocottes-1.disqus.com/embed.js
+id_google_analytics:
+disqus_url:
 title: surlescocottes
 description: ride, dev and other stories
 url: https://surlescocottes.xyz
