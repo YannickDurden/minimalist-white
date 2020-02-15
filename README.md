@@ -2,6 +2,8 @@
 
 Minimalist theme created with tiny but powerful Tachyon Framework
 
+![screenshot](screenshot.png)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
