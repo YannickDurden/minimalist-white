@@ -48,6 +48,10 @@ Also, add this part in your front matter:
 comments: true
 ````
 
+### Pagination
+
+Pagination could be activate, see configuration in the following snippet
+
 ---
 
 For each files, the layout name will be the same as the file name.
@@ -105,8 +109,12 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
 
 permalink: /:title/
+
+paginate: 4
+paginate_path: "/page:num/"
 ```
 
 ## Contributing

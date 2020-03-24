@@ -4,7 +4,7 @@ layout: default
 ---
 <section class="mw7 center">
   <h2 class="fw1 ph3 ph0-l playfair">{{ site.index.title }}</h2>
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   <article class="bt bb b--black-10">
     <a class="db pv4 ph3 ph0-l no-underline black dim" href="{{ post.url }}">
       <div class="flex flex-column flex-row-ns chivo">
@@ -16,9 +16,44 @@ layout: default
           {% assign num_words = post.content | strip_html | number_of_words | append: " words"%}
           <p class="f6 lh-copy mv0 gray">{{ post.author }}</p>
           <time class="f6 db gray">{{ post.date | date: "%b %d, %y" }} - {{ num_words }}</time>
+        </div>
       </div>
-    </div>
     </a>
   </article>
   {% endfor %}
+
+  <!-- pagination -->
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination chivo mv3">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="v-mid">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 24l-18-12 18-12v24zm-16.197-12l15.197 10.132v-20.263l-15.197 10.131"/></svg>
+        </a>
+      {% else %}
+        <span class="v-mid">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21 24l-18-12 18-12v24zm-16.197-12l15.197 10.132v-20.263l-15.197 10.131"/></svg>
+        </span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span>{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="/">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="v-mid">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 24l18-12-18-12v24zm16.197-12l-15.197 10.132v-20.263l15.197 10.131"/></svg>
+        </a>
+      {% else %}
+        <span class="v-mid">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 24l18-12-18-12v24zm16.197-12l-15.197 10.132v-20.263l15.197 10.131"/></svg>
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
 </section>
