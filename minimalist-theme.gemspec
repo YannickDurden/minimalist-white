@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "minimalist-theme"
-  spec.version       = "0.2.4"
+  spec.version       = "0.2.5"
   spec.authors       = ["YannickDurden"]
   spec.email         = ["y.francois54@gmail.com"]
 
