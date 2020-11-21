@@ -2,7 +2,7 @@
 layout: post
 author: Yannick
 categories: [blog, story]
-title: 2019 - 2020, transition
+title: 2019 - 2020, Minimalist Theme
 comments: true
 ---
 
